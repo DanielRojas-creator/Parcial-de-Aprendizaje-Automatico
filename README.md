@@ -7,10 +7,10 @@ Repositorio correspondiente al trabajo práctico de Aprendizaje Automático.
 ```text
 Parcial-de-Aprendizaje-Automatico/
 │
-├── data/          # Conjuntos de datos utilizados
+├── data/          # Conjuntos de datasets utilizados
 ├── docs/          # Documentación del proyecto
 ├── models/        # Modelos de aprendizaje automático
-├── notebooks/     # Notebooks de Google Colab
+├── notebooks/     # Notebooks de Anaconda y Jupyter notebooks
 ├── references/    # Material bibliográfico y de consulta
 ├── reports/       # Informes y resultados
 │
