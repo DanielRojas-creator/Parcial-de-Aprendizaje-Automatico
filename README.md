@@ -22,4 +22,4 @@ Parcial-de-Aprendizaje-Automatico/
 
 El repositorio utiliza una estructura basada en Cookiecutter Data Science para mantener separados los datos, los notebooks, los modelos y la documentación.
 
-Los análisis y la implementación de los modelos se desarrollan en notebooks de Python mediante Google Colab.
+
