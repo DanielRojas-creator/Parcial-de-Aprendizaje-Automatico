@@ -1,4 +1,4 @@
-# Parcial de Aprendizaje Automático
+d# Parcial de Aprendizaje Automático
 
 Repositorio correspondiente al trabajo práctico de Aprendizaje Automático.
 
@@ -8,7 +8,7 @@ Repositorio correspondiente al trabajo práctico de Aprendizaje Automático.
 Parcial-de-Aprendizaje-Automatico/
 │
 ├── data/          # Conjuntos de datasets utilizados
-├── docs/          # Entrega 2: descripción del dataset.
+├── docs/          # Entrega 2: Descripción del Dataset CGMacros.
 ├── models/        # Modelos de aprendizaje automático
 ├── notebooks/     # Notebooks de Anaconda y Jupyter notebooks
 ├── references/    # Material bibliográfico y de consulta
