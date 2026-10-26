@@ -8,7 +8,7 @@ Repositorio correspondiente al trabajo práctico de Aprendizaje Automático.
 Parcial-de-Aprendizaje-Automatico/
 │
 ├── data/          # Conjuntos de datasets utilizados
-├── docs/          # Documentación del proyecto
+├── docs/          # Entrega 2: descripción del dataset.
 ├── models/        # Modelos de aprendizaje automático
 ├── notebooks/     # Notebooks de Anaconda y Jupyter notebooks
 ├── references/    # Material bibliográfico y de consulta
