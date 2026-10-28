@@ -1,4 +1,4 @@
-# Entrega 2: Descripción del Dataset y Origen
+# Descripción del Dataset y Origen
 
 **Proyecto:** Predicción de episodios de hipoglucemia mediante Aprendizaje Automático  
 **Dataset:** CGMacros  
