@@ -1,6 +1,4 @@
-d# Parcial de Aprendizaje Automático
 
-Repositorio correspondiente al trabajo práctico de Aprendizaje Automático.
 
 ## Estructura del repositorio
 
