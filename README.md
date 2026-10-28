@@ -14,8 +14,8 @@ Parcial-de-Aprendizaje-Automatico/
 ├── references/    Material bibliográfico y de consulta
 ├── reports/       Informes y resultados
 │
-├── .gitignore     # Configuración de archivos excluidos
-└── README.md      # Descripción y organización del repositorio
+├── .gitignore     Configuración de archivos excluidos
+└── README.md      Descripción y organización del repositorio
 ```
 
 ## Organización del trabajo
