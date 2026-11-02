@@ -23,7 +23,8 @@ Parcial-de-Aprendizaje-Automatico/
 │   │   └── 14 archivos CSV de participantes
 │   ├── bio.csv
 │   └── README.md
-├── docs/
+├──├── docs/
+│   └── Descripcion_Dataset_CGMacros.md
 ├── models/
 ├── notebooks/
 │   └── Hipoglucemia_ejercicio_diabetes_rutas_corregidas.ipynb
