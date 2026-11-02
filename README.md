@@ -6,7 +6,7 @@
 ├── data/
 │   ├── CGMacros_14_CSV_GitHub/
 │   ├── bio.csv
-│   
+
 ├── docs/          Descripción del Dataset CGMacros.
 ├── models/        Modelos de aprendizaje automático
 ├── notebooks/     Notebooks de Anaconda y Jupyter notebooks
