@@ -27,7 +27,7 @@ Parcial-de-Aprendizaje-Automatico/
 │   └── Descripcion_Dataset_CGMacros.md
 ├── models/
 ├── notebooks/
-│   └── Hipoglucemia_ejercicio_diabetes_rutas_corregidas.ipynb
+│   └── hipoglucemia_ejercicio.ipynb
 ├── references/
 ├── reports/
 ├── .gitignore
