@@ -39,7 +39,7 @@ Parcial-de-Aprendizaje-Automatico/
 1. Ingresar al repositorio de GitHub.
 2. Seleccionar **Code → Download ZIP**.
 3. Descomprimir el repositorio completo, conservando la estructura de carpetas.
-4. Abrir la notebook `Hipoglucemia_ejercicio_diabetes_rutas_corregidas.ipynb`, ubicada en `notebooks/`, utilizando Jupyter Notebook o JupyterLab.
+4. Abrir la notebook `hipoglucemia_ejercicio_diabetes.ipynb`, ubicada en `notebooks/`, utilizando Jupyter Notebook o JupyterLab.
 5. Verificar que estén instaladas las bibliotecas necesarias, entre ellas pandas, numpy, matplotlib y scikit-learn.
 6. Reiniciar el kernel y ejecutar todas las celdas en orden mediante **Run All**.
 
