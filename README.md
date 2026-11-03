@@ -35,6 +35,11 @@ Parcial-de-Aprendizaje-Automatico/
 └── README.md
 ```
 
+## Diccionario de datos
+
+[Consultar Diccionario de Datos CGMacros](docs/Diccionario_de_datos_CGMacros.md)
+
+
 ## Instrucciones para ejecutar la notebook
 
 1. Ingresar al repositorio de GitHub.
