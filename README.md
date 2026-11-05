@@ -66,3 +66,87 @@ Las asociaciones identificadas por el análisis no permiten establecer relacione
 El repositorio incluye los archivos de datos y la notebook necesarios para reproducir el procedimiento de análisis.
 
 La ejecución completa debe comprobarse reiniciando el kernel y ejecutando todas las celdas en orden, verificando que no se produzcan errores.
+
+## Análisis exploratorio de datos (EDA)
+
+Se realizó un análisis descriptivo de las variables glucosa media y actividad física (MET), comparando las ventanas con y sin hipoglucemia.
+
+Se calcularon la media y la mediana de ambas variables y se elaboraron dos diagramas de caja (*boxplots*) en un mismo gráfico.
+
+**Resultados:**
+
+- Glucosa previa sin hipoglucemia: media de 133,41 mg/dL.
+- Glucosa previa con hipoglucemia: media de 95,51 mg/dL.
+- Actividad física sin hipoglucemia: MET medio de 1,77.
+- Actividad física con hipoglucemia: MET medio de 1,59.
+
+La glucosa previa presentó diferencias descriptivas más marcadas entre ambos grupos. La actividad física mostró diferencias menores y una importante superposición de valores.
+
+Estas asociaciones no permiten establecer relaciones causales.
+
+## Preprocesamiento de los datos
+
+Se seleccionaron 14 participantes del dataset CGMacros con HbA1c superior al 6,4 %. De ellos, 10 disponían de datos de glucosa y actividad física.
+
+Se realizaron las siguientes operaciones:
+
+- Control de fechas, duplicados y valores faltantes.
+- Ordenamiento cronológico de los registros.
+- Construcción de ventanas consecutivas de 120 minutos, sin superposición.
+- Cálculo de la glucosa media y actividad física media durante los primeros 60 minutos.
+- Identificación de episodios de hipoglucemia durante los 60 minutos siguientes.
+- Exclusión de ventanas incompletas, con interrupciones o que no cumplían los criterios establecidos.
+
+Se consideró episodio válido una glucosa inferior a 70 mg/dL durante al menos 15 registros consecutivos de un minuto.
+
+Se obtuvieron **1.213 ventanas válidas: 12 positivas y 1.201 negativas**.
+
+## Entrenamiento del modelo
+
+Se utilizó un modelo de regresión logística para clasificar las ventanas según la aparición de hipoglucemia.
+
+La separación de datos se realizó por participante:
+
+- Entrenamiento: 7 participantes, 867 ventanas originales.
+- Prueba: 3 participantes, 346 ventanas.
+
+Debido al desbalance de clases, se seleccionaron 6 ventanas positivas y 6 negativas para entrenar el modelo.
+
+Se aplicó `StandardScaler` para escalar las variables, ajustándolo exclusivamente con los datos de entrenamiento.
+
+La regresión logística se configuró con `max_iter=1000` y `random_state=42`.
+
+El conjunto de prueba permaneció sin balancear.
+
+## Evaluación del modelo
+
+Se evaluó el modelo con las 346 ventanas de los tres participantes reservados para prueba.
+
+| Métrica | Resultado |
+|---|---|
+| Exactitud de entrenamiento | 75 % |
+| Exactitud de prueba | 69,9 % |
+| Exactitud balanceada | 68,3 % |
+| Sensibilidad para hipoglucemia | 66,7 % |
+| Precisión para hipoglucemia | 3,8 % |
+| F1-score para hipoglucemia | 0,07 |
+| ROC-AUC | 0,731 |
+
+**Matriz de confusión:**
+
+- Verdaderos positivos: 4.
+- Falsos negativos: 2.
+- Verdaderos negativos: 238.
+- Falsos positivos: 102.
+
+El modelo identificó 4 de las 6 ventanas positivas del conjunto de prueba, pero produjo 102 falsos positivos.
+
+## Conclusiones
+
+La glucosa previa mostró una asociación descriptiva con la aparición posterior de hipoglucemia. La actividad física presentó diferencias menores entre los grupos analizados.
+
+Aunque el modelo identificó parte de los episodios, la elevada cantidad de falsos positivos limita su utilidad predictiva.
+
+El reducido número de episodios positivos también limita la interpretación de los resultados.
+
+Se trata de un estudio académico y exploratorio que requiere una validación más amplia por participante y una evaluación independiente antes de considerar aplicaciones clínicas.
