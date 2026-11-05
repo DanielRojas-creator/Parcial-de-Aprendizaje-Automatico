@@ -67,6 +67,25 @@ El repositorio incluye los archivos de datos y la notebook necesarios para repro
 
 La ejecución completa debe comprobarse reiniciando el kernel y ejecutando todas las celdas en orden, verificando que no se produzcan errores.
 
+"" Descripción del Dataset y Origen
+Proyecto: Predicción de episodios de hipoglucemia mediante Aprendizaje Automático
+Dataset: CGMacros
+Entorno de trabajo: Anaconda – Jupyter Notebook – Python
+Fecha: 26 de octubre de 2026
+
+"" Origen del dataset y lugar del estudio
+El dataset CGMacros procede de una investigación científica sobre nutrición personalizada, monitoreo continuo de glucosa y actividad física.
+
+El estudio se desarrolló en el Sansum Diabetes Research Institute (SDRI), ubicado en Santa Bárbara, California, Estados Unidos, donde fueron reclutados los participantes.
+
+En la investigación participaron profesionales vinculados a diferentes instituciones, entre ellas Texas A&M University y Sansum Diabetes Research Institute.
+
+Los participantes fueron reclutados entre 2021 y 2024.
+
+Los resultados se publicaron el 25 de septiembre de 2025 en la revista científica Scientific Data, bajo el título:
+
+CGMacros: a pilot scientific dataset for personalized nutrition and diet monitoring.
+
 ## Análisis exploratorio de datos (EDA)
 
 Se realizó un análisis descriptivo de las variables glucosa media y actividad física (MET), comparando las ventanas con y sin hipoglucemia.
