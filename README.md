@@ -67,24 +67,48 @@ El repositorio incluye los archivos de datos y la notebook necesarios para repro
 
 La ejecución completa debe comprobarse reiniciando el kernel y ejecutando todas las celdas en orden, verificando que no se produzcan errores.
 
-"" Descripción del Dataset y Origen
-Proyecto: Predicción de episodios de hipoglucemia mediante Aprendizaje Automático
-Dataset: CGMacros
-Entorno de trabajo: Anaconda – Jupyter Notebook – Python
-Fecha: 26 de octubre de 2026
+## Descripción y origen del dataset
 
-"" Origen del dataset y lugar del estudio
-El dataset CGMacros procede de una investigación científica sobre nutrición personalizada, monitoreo continuo de glucosa y actividad física.
+Para este proyecto se utilizó **CGMacros**, un conjunto de datos de investigación que contiene registros de monitoreo continuo de glucosa y otras variables fisiológicas y de actividad física.
 
-El estudio se desarrolló en el Sansum Diabetes Research Institute (SDRI), ubicado en Santa Bárbara, California, Estados Unidos, donde fueron reclutados los participantes.
+El dataset permite estudiar el comportamiento de la glucosa en relación con diferentes factores, incluida la actividad física.
 
-En la investigación participaron profesionales vinculados a diferentes instituciones, entre ellas Texas A&M University y Sansum Diabetes Research Institute.
+Los archivos utilizados fueron:
 
-Los participantes fueron reclutados entre 2021 y 2024.
+- **bio.csv:** contiene información de los participantes, incluida la hemoglobina glucosilada (HbA1c).
+- **CGMacros-XXX.csv:** contiene registros individuales de cada participante, con fecha y hora de medición, glucosa y otras variables disponibles.
 
-Los resultados se publicaron el 25 de septiembre de 2025 en la revista científica Scientific Data, bajo el título:
+### Variables utilizadas en el proyecto
 
-CGMacros: a pilot scientific dataset for personalized nutrition and diet monitoring.
+| Variable | Descripción |
+|---|---|
+| `subject` | Identificador del participante |
+| `A1c PDL (Lab)` | Hemoglobina glucosilada (HbA1c) |
+| `Timestamp` | Fecha y hora del registro |
+| `Libre GL` | Glucosa registrada en mg/dL |
+| `METs` | Intensidad de actividad física expresada en equivalentes metabólicos |
+
+### Selección y utilización de los datos
+
+Se seleccionaron inicialmente **14 participantes con HbA1c superior al 6,4 %**.
+
+Se analizaron 218.535 registros originales. Cuatro participantes no disponían de datos de actividad física expresados en MET, por lo que el análisis continuó con 10 participantes.
+
+Para construir el modelo predictivo se utilizaron dos variables:
+
+- **Glucosa media:** promedio de glucosa durante los 60 minutos previos.
+- **MET medio:** promedio de intensidad de actividad física durante esos mismos 60 minutos.
+
+A partir de los registros se construyeron ventanas de 120 minutos:
+
+- **Primera hora:** obtención de las variables predictoras.
+- **Segunda hora:** identificación de posibles episodios de hipoglucemia.
+
+Se consideró un episodio válido cuando la glucosa permaneció por debajo de 70 mg/dL durante al menos 15 registros consecutivos de un minuto.
+
+Después del control de calidad y la aplicación de los criterios de exclusión, se obtuvieron **1.213 ventanas válidas**, utilizadas para desarrollar y evaluar el modelo de regresión logística.
+
+El objetivo fue investigar si la glucosa y la actividad física registradas durante una hora permiten anticipar episodios de hipoglucemia durante la hora siguiente.
 
 ## Análisis exploratorio de datos (EDA)
 
