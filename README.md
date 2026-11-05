@@ -72,6 +72,8 @@ La ejecución completa debe comprobarse reiniciando el kernel y ejecutando todas
 Se realizó un análisis descriptivo de las variables glucosa media y actividad física (MET), comparando las ventanas con y sin hipoglucemia.
 
 Se calcularon la media y la mediana de ambas variables y se elaboraron dos diagramas de caja (*boxplots*) en un mismo gráfico.
+<img width="834" height="344" alt="image" src="https://github.com/user-attachments/assets/5e718454-3a3b-46e6-895d-c3d857e94479" />
+
 
 **Resultados:**
 
