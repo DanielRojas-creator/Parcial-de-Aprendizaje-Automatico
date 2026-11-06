@@ -195,3 +195,16 @@ Aunque el modelo identificó parte de los episodios, la elevada cantidad de fals
 El reducido número de episodios positivos también limita la interpretación de los resultados.
 
 Se trata de un estudio académico y exploratorio que requiere una validación más amplia por participante y una evaluación independiente antes de considerar aplicaciones clínicas.
+
+## Cómo reproducir el proyecto
+
+Para que otra persona pueda reproducir mi análisis, organizo el proyecto en GitHub, conservando los archivos de datos y la notebook.
+
+Los pasos para ejecutarlo son:
+
+1. Descargar el repositorio completo desde GitHub mediante **Code → Download ZIP** y descomprimirlo.
+2. Conservar la estructura de carpetas `data/` y `notebooks/`.
+3. Abrir el archivo `notebooks/Hipoglucemia_ejercicio.ipynb` utilizando Jupyter Notebook o JupyterLab.
+4. Tener instaladas las bibliotecas necesarias: Pandas, NumPy, Matplotlib y Scikit-learn.
+5. Reiniciar el kernel y ejecutar todas las celdas en orden.
+
