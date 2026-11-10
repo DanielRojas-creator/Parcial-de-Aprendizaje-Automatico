@@ -208,6 +208,5 @@ Los pasos para ejecutarlo son:
 4. Tener instaladas las bibliotecas necesarias: Pandas, NumPy, Matplotlib y Scikit-learn.
 5. Reiniciar el kernel y ejecutar todas las celdas en orden.
 
-Comparto link a Video explicativo:
-user2471961784197 compartió un enlace de CapCut contigo  https://www.capcut.com/sv2/ZS9fSe1sUtemH-M0wza/
+Comparto link a Video explicativo:  https://www.capcut.com/sv2/ZS9fSe1sUtemH-M0wza/
 
